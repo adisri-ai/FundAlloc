@@ -79,6 +79,6 @@ def find(x):
     st.markdown("## :green[Last 10 years performance] :chart_with_upwards_trend: :")
     st.dataframe(pd.DataFrame({"year":[str(2014+i) for i in range(10)] , "return(in %)":ret} , index=[i+1 for i in range(10)]))
     st.markdown(f"## :orange[Average annual return is:] :green[{str(round(s,2))+"%"}] :smile:")
-y = st.number_input(label="Enter the minimum annual return you can bear(in %):")
+y = st.number_input(label="Enter the min(%) annual return you can tolerate in a bad market year (Eg: Enter -7.00 for -7% , Enter 5.00 for +5%):")
 if st.button("Get me the best portfolio"):
     find(y)
